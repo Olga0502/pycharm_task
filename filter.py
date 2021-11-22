@@ -13,15 +13,17 @@ def grey_img(file_image, gradation, size_moz):
     arr_pixels = np.array(img)
     height = len(arr_pixels)
     width = len(arr_pixels[1])
-    step = 255 // graduation
+    step = 255 // gradation
+    pix_x = 0
     for y in range(0, height, size_moz):
+        pix_y = 0
         for x in range(0, width, size_moz):
              brightness = get_brightness(arr_pixels, pix_x, pix_y, size_moz)
              set_color(arr_pixels, brightness, size_moz, pix_x, pix_y, step)
     return arr_pixels
 
 file_image = input("Введите имя входного файла")
-size_moz = input("Введите размер желаемой мозайки")
+size_moz = int(input("Введите размер желаемой мозайки"))
 gradation = int(input("Введите количество градаций(число)"))
 res_image = input("Введите имя файла для сохранения")
 img = Image.open(file_image)
