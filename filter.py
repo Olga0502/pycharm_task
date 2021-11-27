@@ -1,29 +1,35 @@
 from PIL import Image
 import numpy as np
 
-def get_brightness(arr_pixels, pix_x, pix_y, size_moz):
-    sum_color = np.sum(arr_pixels[pix_x: pix_x + size_moz, pix_y: pix_y + size_moz])
-    return int(sum_color // 3 // size_moz ** 2)
+def get_brightness(pixels, pix_x, pix_y, size_moz):
+    sum_color = np.sum(pixels[pix_x: pix_x + size_moz, pix_y: pix_y + size_moz])
+    return int((sum_color / 3) // size_moz ** 2)
 
-def set_color(arr_pixels, brightness, size_moz, pix_x, pix_y, step):
-    value_grey = int(brightness // step) * step
-    arr_pixels[pix_x: pix_x + size_moz, pix_y: pix_y + size_moz] = value_grey
 
-def grey_img(file_image, gradation, size_moz):
-    arr_pixels = np.array(img)
-    height = len(arr_pixels)
-    width = len(arr_pixels[1])
-    step = 255 // graduation
-    for y in range(0, height, size_moz):
-        for x in range(0, width, size_moz):
-             brightness = get_brightness(arr_pixels, pix_x, pix_y, size_moz)
-             set_color(arr_pixels, brightness, size_moz, pix_x, pix_y, step)
-    return arr_pixels
+def set_color(pixels, pix_x, pix_y, size_moz, step):
+    value_grey = get_brightness(pixels, pix_x, pix_y, size_moz)
+    pixels[pix_x: pix_x + size_moz, pix_y: pix_y + size_moz] = int(value_grey // step) * step
+
+
+def grey_img(pixels, gradation, size_moz):
+    step = 255 // (gradation - 1)
+    height = len(pixels)
+    width = len(pixels[1])
+    pix_x = 0
+    while pix_x < height:
+        pix_y = 0
+        while pix_y < width:
+            set_color(pixels, pix_x, pix_y, size_moz, step)
+            pix_y = pix_y + size_moz
+        pix_x = pix_x + size_moz
+    return pixels
+
 
 file_image = input("Введите имя входного файла")
-size_moz = input("Введите размер желаемой мозайки")
+img = Image.open(file_image)
+arr_pixels = np.array(img)
+size_moz = int(input("Введите размер желаемой мозайки"))
 gradation = int(input("Введите количество градаций(число)"))
 res_image = input("Введите имя файла для сохранения")
-img = Image.open(file_image)
-res = Image.fromarray(grey_img(file_image, gradation, size_moz))
+res = Image.fromarray(grey_img(arr_pixels, gradation, size_moz))
 res.save(res_image)
