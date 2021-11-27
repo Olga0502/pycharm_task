@@ -16,7 +16,22 @@
 
 Без ввода данных мы можем заметить, как сильно уменьшилось время, благодаря исправлению ошибок в программе, использованию библиотек и выделению функций.
 
+
 # Изображения
 Изображение до обработки: 
 
 ![img2](https://user-images.githubusercontent.com/93836720/143719660-8c0b8ed1-ba7c-4ae5-ac5d-62793faea510.jpg)
+
+После обработки old_filter.py:
+
+![res](https://user-images.githubusercontent.com/93836720/143719788-dce68f67-e0c8-4906-8c42-8c7b522db94e.jpg)
+
+После обработки filter.py:
+
+![f1](https://user-images.githubusercontent.com/93836720/143719797-d3b93cf9-d2dd-4c57-aa6c-1d214a810f63.jpg)
+
+
+После обработки filter_with_filename.py:
+
+![f2](https://user-images.githubusercontent.com/93836720/143719814-37ae3915-fcc9-4f96-9572-41f9bdcec0ae.jpg)
+
