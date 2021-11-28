@@ -1,4 +1,4 @@
-# Профилизатор в PyCharm
+# Профилизатор
 Результат для filter.py:
 
 ![1](https://user-images.githubusercontent.com/93836720/143690360-55b364fd-cecc-433c-b1c4-35286e09d7cf.jpg)
