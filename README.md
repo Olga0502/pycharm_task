@@ -5,7 +5,7 @@
 
 Результат для old_filter.py:
 
-![2](https://user-images.githubusercontent.com/93836720/143690369-0abb0a71-5303-4cc2-8c51-fc0de17235be.jpg)Cancel changes
+![2](https://user-images.githubusercontent.com/93836720/143690369-0abb0a71-5303-4cc2-8c51-fc0de17235be.jpg)
 
 
 Из данных скриншотов мы видим, что время выполнения нового файла больше. Это связано с тем, что у нас есть ввод данных с консоли.
