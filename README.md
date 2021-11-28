@@ -35,3 +35,21 @@
 
 ![f2](https://user-images.githubusercontent.com/93836720/143719814-37ae3915-fcc9-4f96-9572-41f9bdcec0ae.jpg)
 
+
+# DOC-тесты
+
+Doc-тест для функции get_brightness:
+
+![test](https://user-images.githubusercontent.com/93836720/143733664-7ee466a4-d591-4b38-99b8-fa5cb07048c4.jpg)
+
+Тест выполняется:
+
+![done](https://user-images.githubusercontent.com/93836720/143733678-5d55de4b-1fea-4338-9ab8-db0e37f3a7b1.jpg)
+
+Если же тест не выполняется:
+
+![no](https://user-images.githubusercontent.com/93836720/143733684-f53870bd-8cda-4a47-a44a-eeed745cf7ae.jpg)
+
+Для функции set_color нет тестов, т.к. функция ничего не возвращает
+
+Для функции grey_img нет тестов, т.к. функция возвращает итоговое изображение(объект numpy)
