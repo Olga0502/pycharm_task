@@ -1,6 +1,6 @@
+import doctest
 from PIL import Image
 import numpy as np
-import doctest
 
 
 def get_brightness(pixels, pix_x, pix_y, size_moz):
