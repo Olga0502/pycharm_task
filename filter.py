@@ -7,7 +7,7 @@ def get_brightness(pixels, pix_x, pix_y, size_moz):
     """
             Считает "шаг" серого цвета и возвращает среднюю яркость
             >>> get_brightness(np.array(Image.open('img2.jpg')), 5, 5, 10)
-            18
+            17
             >>> get_brightness(np.array(Image.open("img2.jpg")), 15, 15, 5)
             19
     """
